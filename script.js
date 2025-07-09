@@ -43,3 +43,15 @@ function clearText() {
   document.getElementById("inputText").value = "";
   document.getElementById("outputText").value = "";
 }
+function copyOutput() {
+  const output = document.getElementById("outputText");
+  output.select();
+  output.setSelectionRange(0, 99999); // For mobile devices
+
+  try {
+    document.execCommand("copy");
+    alert("Copied to clipboard! 🧠");
+  } catch (err) {
+    alert("Failed to copy 😓");
+  }
+}

@@ -126,3 +126,19 @@ textarea {
     justify-content: center;
   }
 }
+.copy-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: #666;
+  transform: scale(1.05);
+}
