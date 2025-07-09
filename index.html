@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hmglish Translator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-animation"></div>
+
+  <div class="container">
+    <h1>🧠 Hmglish Translator</h1>
+    <p class="subtext">Because sometimes all you get is a “hm”... so we made a language out of it</p>
+    
+    <textarea id="inputText" placeholder="Type your English message here..."></textarea>
+    
+   <div class="buttons">
+  <button onclick="encodeHmglish()">🔐 Encode</button>
+  <button onclick="decodeHmglish()">🔓 Decode</button>
+  <button onclick="clearText()">🧹 Clear</button>
+</div>
+
+    
+    <textarea id="outputText" placeholder="Hmglish output will appear here..." readonly></textarea>
+
+    <div class="about">
+      <h2>📜 The Legend of Hmglish</h2>
+      <p>
+        Once upon a conversation, a husband poured his heart out in a long, sweet message... and all he got back was: <b>“hm”</b>. 💔<br><br>
+        But instead of feeling ignored, he had a genius idea — what if “hm” is actually a secret code? Thus, <b>Hmglish</b> was born: a binary-style encoding language where <code>H = 0</code> and <code>M = 1</code>.<br><br>
+        Now, you too can speak in pure "hm" and hide your deepest feelings in plain sight. 🧙‍♂️
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

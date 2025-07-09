@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  resize: none;
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.buttons button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.buttons button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.about {
+  margin-top: 30px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Floating "H"/"M" animation */
+.bg-animation::before {
+  content: "HM HM M H M HM H M";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 10vw;
+  color: rgba(255,255,255,0.03);
+  animation: floatHM 30s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@keyframes floatHM {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
+}
+
+@media (min-width: 600px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
